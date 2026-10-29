@@ -5,7 +5,8 @@
 > Each term: **What** (plain words), **Hook** (memory
 > trick), **Example**.
 
-**Status:** Week 1 -> 1.1, 1.2, 1.3a, 1.3b done
+**Status:** Week 1 -> 1.1, 1.2, 1.3a, 1.3b done.
+Week 2 -> 2.2 (parts 1 and 2) done, 2.1 pending.
 
 ---
 
@@ -99,6 +100,17 @@ Actors are a subset of stakeholders.
 | Technical vs non-technical | 1.3a    |
 | Unconscious bias           | 1.1     |
 | Value                      | 1.3b    |
+| AI impact assessment (AI-IA) | 2.2 p1 |
+| Ethics impact assessment (EIA) | 2.2 p1 |
+| IEEE 7010                  | 2.2 p1  |
+| Intended user              | 2.2 p2  |
+| Taxonomy                   | 2.2 p1  |
+| Unintended user            | 2.2 p2  |
+| Well-being impact assessment (WIA) | 2.2 p2 |
+| Well-being indicators dashboard | 2.2 p2 |
+| Stakeholder (IEEE 7010)    | 2.2 p2  |
+| Stakeholder tiers          | 2.2 p2  |
+| 4 impact dimensions        | 2.2 p2  |
 
 ---
 
@@ -445,6 +457,84 @@ Standard = exact spec.
 - Is sustainable development the same as caring for
   the environment?
 - "Inclusive growth": who is included?
+
+---
+
+# Week 2
+
+## Lecture 2.1: (waiting for the correct transcript)
+
+## Lecture 2.2: Helsinki AV Scenario and IEEE 7010
+
+**Big idea:** impact assessments and standards are not
+neutral. IEEE 7010 gives a process to assess a system's
+effect on human well-being.
+
+### Taxonomy
+**What:** a **closed list of acceptable terms arranged
+hierarchically** to describe and classify content.
+Glossaries and definitions also classify.
+**Warning:** taxonomies operationalize certain values,
+can prioritize some stakeholders, and **miss true harms.**
+
+### AI impact assessment (AI-IA)
+**What:** identify **positive and negative impacts
+early** to safeguard benefits and avoid downsides.
+Can be self-assessments used for audits and legal or
+standards requirements.
+**Covers:** human rights, ethics, data protection,
+privacy, security, safety, environment.
+**Fits in:** organizational processes and the wider
+governance system. **Not neutral.**
+
+### Ethics impact assessment (EIA)
+**What:** impact assessment focused on ethics. Like
+AI-IAs and standards, **not neutral.**
+
+### IEEE 7010
+**What:** *Recommended Practice for Assessing the Impact
+of Autonomous and Intelligent Systems on Human
+Well-Being.* Produces a well-being indicators dashboard.
+
+### Well-being impact assessment (WIA)
+**What:** the IEEE 7010 process. **Iterative**, done at
+**every phase** (concept, design, development,
+ongoing monitoring). **5 activities:** internal
+analysis, user/stakeholder engagement, indicators
+dashboard, data collection process and collection, data
+analysis and iteration.
+**WIA activity one:** internal user and stakeholder
+impact assessment (guidance pp. 21-22, Annex E).
+
+### Well-being indicators dashboard
+**What:** the output of the WIA, used to design, deploy,
+monitor, and improve the system. At least **one
+indicator per domain**, aligned with established datasets
+(e.g., the World Happiness Report).
+
+### Intended / unintended user / stakeholder
+- **Intended user:** person the creator intends to use
+  the system.
+- **Unintended user:** not intended, but interacts with
+  it anyway (children, tourists, suspended-license
+  drivers).
+- **Stakeholder:** anyone meaningfully (or potentially)
+  **impacted by** the system **or impacting it** (police,
+  insurers, data labelers, pedestrians).
+
+### Stakeholder tiers (Helsinki pilot)
+1. Directly impacted
+2. Elderly and vulnerable populations
+3. Indirect and future users and stakeholders
+
+### 4 dimensions of an impact assessment
+**Stakeholders, harms, risk, values.**
+
+### Case: Helsinki AV pilot
+Goal: end personal car ownership by 2040. Pilot on an
+island, ~5,000 people, one month. Providers: INVIDA
+(AI), Cargle (cars), SimTech (infrastructure). Uses
+**"satisfaction with life"** as an indicator.
 
 ---
 

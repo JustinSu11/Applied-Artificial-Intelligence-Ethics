@@ -1,0 +1,27 @@
+Welcome to the presentation on examining the values and intent of AI ethics and emerging frameworks.
+
+What is the difference between AI ethics and AI governance? Put simply, AI ethics asks, "What should AI do?" While AI governance asks, "How do we ensure AI does what it should?" It is policy-driven and should, or typically has enforceable mechanisms.
+
+AI governance refers to the rules and processes that coordinate behavior. The development and deployment of advanced AI systems involves many organizations and individuals with distinct goals and incentives.
+
+AI governance frameworks can generally be divided into two broad streams; technical and non-technical governance. Technical governance concern systems and processes that render the activity of the technology itself accountable and transparent. This includes justifying what design choices are made and ensuring the system is accessible, ethical by design, and testing and validation. Non-technical methods include regulation, codes of conduct, standardization, certification, education and awareness to foster an ethical mindset, stakeholder participation, and social dialogue and so forth.
+
+It might be useful to conceptualize these governing mechanisms for AI at three different levels: Governance aimed at regulating individual behavior, governance aimed at regulating institutional behavior, and governance aimed at regulating society at large.
+
+The first level that societal covers national and international policy and regulation, and these drive a lot of individual and organizational activity and play a major role in governing AI. These also include human rights, civil rights, and those that are safeguarded in international agreements such as the Universal Declaration of Human Rights.
+
+The second level of measures aim at the institutional level, providing guidance for organizations to follow or adopt. This could include mechanisms for risk management, impact assessment approaches, such as for privacy or data protection, technology assessments, ethics impact assessments, social impact assessments, human right impact assessments. These can extend governance mechanisms for quality assurance or data governance, due diligence, corporate social responsibility, and algorithmic audits.
+
+Another level of governance aims at individuals, a quickly growing number of AI ethics frameworks originating from companies, governments, or other organizations, professional guidance, for example, from bodies such as the ACM, the BCS, standardization initiatives, the ISO or the IEEE standards that consider the ethics of AI. Development methodologies can be created or adapted to pay attention to ethical issues, for example, by integrating specific issues into the design process such as privacy by design, or more broadly by adopting ethics by design or ethics in design approaches.
+
+As a point of clarification in this course, you will hear the words AI actors and stakeholders used quite frequently. The common definition, according to NIST AI actors are persons, groups, or organizations acting within a system of interest. AI actors are those who play an active role in an AI system lifecycle, including organizations and individuals that deploy or operate AI. Stakeholders encompass all organizations and individuals involved in or affected by AI systems directly or indirectly. AI actors are a subset of stakeholders.
+
+And so broadly the global AI actors involved in AI governance are: Come from the private sector, government, international organizations, multi-stakeholder organizations, civil society, and natural persons.
+
+AI ethics and AI governance is not value neutral, and a lot of the publications, communications, guidances, and frameworks, are steering the direction of AI to future-proof artificial intelligence, and its surrounding ethical and regulatory climate for their own interests, and the interest of business. So AI ethical governance may or may not represent the societal good, depending on the AI actor that it comes from. AI actors benefit often at the expense of human rights and democracy, and looking at the values and intent of the AI actors is very important in AI governance.
+
+Here are a few examples of the types of AI governance actors and examples of organizations of each type, a list of AI standards organizations for your reference, examples of industry and professional organizations, and to the far right are community and advocacy organizations involved in AI ethics.
+
+A note about the Partnership on AI (PAI), an emerging global AI actor involved in governance, the Partnership on AI is comprised of Apple, Amazon, DeepMind, Google, Facebook, IBM, and Microsoft, and they also are working on the AI incident database.
+
+In summary, natural persons use and are deeply impacted by AI systems. National governments protect rights, make laws, regulations, and standards. Nonprofits play a variety of roles aimed at improving various aspects of society. International organizations facilitate cooperation between countries. Corporations develop and deploy AIs for profit. And multi-stakeholders are alliances that form technical agreements to gain industry advantages. And a final note in looking at AI actors, their communications, publications, and their core intent.
