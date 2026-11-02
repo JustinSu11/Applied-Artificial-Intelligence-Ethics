@@ -7,6 +7,7 @@
 
 **Status:** Week 1 -> 1.1, 1.2, 1.3a, 1.3b done.
 Week 2 -> 2.2 (parts 1 and 2) done, 2.1 pending.
+Week 3 -> 3.1 lecture + lab (concepts, tutorial) done.
 
 ---
 
@@ -50,6 +51,21 @@ Technical standard (exact spec)
 **Actors vs Stakeholders** = actors *do* (build/run AI),
 stakeholders are *involved or affected*.
 Actors are a subset of stakeholders.
+
+**Fairness metrics (Week 3)** = how to read them:
+
+| Metric | Fair value | Bad sign |
+|--------|-----------|----------|
+| SPD (difference) | 0 | negative = unprivileged loses |
+| DI (ratio) | 1 | below 0.8 fails four-fifths rule |
+| EOD (TPR gap) | 0 | big gap in true positive rate |
+| SEDF (intersectional) | 0 | far from 0 |
+
+**Mitigation = Pre / In / Post** (Before, During, After
+training). Hook: *fix the data, fix the learner,
+fix the output.*
+
+**Bias sources (3)** = Data -> Truths -> Insights
 
 ---
 
@@ -111,6 +127,40 @@ Actors are a subset of stakeholders.
 | Stakeholder (IEEE 7010)    | 2.2 p2  |
 | Stakeholder tiers          | 2.2 p2  |
 | 4 impact dimensions        | 2.2 p2  |
+| Adversarial debiasing      | 3.1     |
+| Algorithmic bias           | 3.1     |
+| Anchoring bias             | 3.1     |
+| Bias (ML)                  | 3.1     |
+| COMPAS                     | 3.1     |
+| Conservatism bias          | 3.1     |
+| Disparate impact (DI)      | 3.1     |
+| Disparate Impact Remover   | 3.1     |
+| Equal opportunity difference (EOD) | 3.1 |
+| Equalized odds             | 3.1     |
+| Ethical dilemma            | 3.1     |
+| Ethical transgression      | 3.1     |
+| Exclusion bias             | 3.1     |
+| Fairness                   | 3.1     |
+| Fairness vs accuracy       | 3.1     |
+| Four-fifths rule           | 3.1     |
+| Historical bias            | 3.1     |
+| In-processing              | 3.1     |
+| Measurement bias           | 3.1     |
+| Post-processing            | 3.1     |
+| Pre-processing             | 3.1     |
+| Prejudice bias             | 3.1     |
+| Privileged / unprivileged  | 3.1     |
+| Protected attribute        | 3.1     |
+| Repair level               | 3.1     |
+| Reweighing                 | 3.1     |
+| Salience bias              | 3.1     |
+| Sampling bias              | 3.1     |
+| SMOTE                      | 3.1     |
+| Simpson's paradox          | 3.1     |
+| SEDF                       | 3.1     |
+| Statistical parity difference (SPD) | 3.1 |
+| Structural bias            | 3.1     |
+| Systemic bias              | 3.1     |
 
 ---
 
@@ -535,6 +585,128 @@ Goal: end personal car ownership by 2040. Pilot on an
 island, ~5,000 people, one month. Providers: INVIDA
 (AI), Cargle (cars), SimTech (infrastructure). Uses
 **"satisfaction with life"** as an indicator.
+
+---
+
+# Week 3
+
+## Lecture 3.1: Bias and Fairness (COMPAS) + Lab
+
+**Big idea:** Bias gets into models from data, society,
+and how we read results. Fairness metrics measure it,
+mitigation reduces it, and fairness always trades off
+against accuracy.
+
+### Bias (in ML)
+**What:** systematic error that favors or harms groups.
+**Hook:** A scale that always reads heavy for one group.
+
+### Fairness
+**What:** a model treats groups (by protected attribute)
+equitably. Which definition fits is a **value choice.**
+
+### COMPAS
+**What:** Northpointe's risk score for reoffending, used
+in US courts. ProPublica (2016) found unequal errors by
+race: Black non-reoffenders flagged high risk ~45% vs
+~24% for white. Race was not an input (proxies).
+**Hook:** Race wasn't asked, but it still leaked in.
+
+### Ethical transgression vs dilemma
+- **Transgression:** crossing a moral boundary (legal or
+  not).
+- **Dilemma:** every option leads to a transgression.
+**Hook:** Transgression = crossing the line. Dilemma =
+every road crosses it.
+
+### Bias types: 3 buckets
+**Data:** *sampling* (unrepresentative), *measurement*
+(faulty capture), *exclusion* (groups left out).
+**Truths in data:** *systemic*, *structural* (wage gaps),
+*prejudice* (stereotypes), *historical*.
+**Insights:** *conservatism* (ignore new evidence),
+*salience* (loudest feature), *anchoring* (first number),
+*confirmation*, *algorithmic* (design choices).
+**Hook:** Data -> Truths -> Insights.
+
+### Protected attribute / privileged vs unprivileged
+**What:** traits like race, gender, age, religion.
+Privileged group gets the advantage; unprivileged is hurt
+most.
+**Lab:** age, privileged = 26-47, unprivileged = 21-25
+and 48+.
+
+### Statistical parity difference (SPD)
+**What:** P(favorable | unprivileged) minus
+P(favorable | privileged).
+**Read:** 0 = fair, negative = unprivileged loses.
+**Lab:** -0.1202 on training data.
+
+### Disparate impact (DI)
+**What:** the *ratio* of those two probabilities.
+**Read:** 1 = fair, below 1 = unprivileged loses, above 1
+= unprivileged favored. Legal staple.
+**Lab:** 0.8480 on training data.
+
+### Four-fifths rule
+**What:** DI below **0.8** is evidence of adverse impact.
+From US hiring practice under **Title VII, Civil Rights
+Act of 1964.**
+
+### Equal opportunity difference (EOD)
+**What:** gap in **true positive rate** between groups.
+
+### Equalized odds
+**What:** TPR **and** the negative-class error rate match
+across groups. Stricter than EOD.
+
+### SEDF (smoothed empirical differential fairness)
+**What:** **intersectional** fairness over all groups of
+the protected attributes, not just privileged vs not.
+Handles **Simpson's paradox.**
+**Read:** **0 = fair**, farther from 0 = less fair.
+(The lab narrator says "closer to 1"; the numbers back 0.)
+
+### Simpson's paradox
+**What:** a trend in the whole data reverses or vanishes
+when you split into subgroups.
+
+### Mitigation: Pre / In / Post
+- **Pre-processing** (fix data): reweighing, DIR, SMOTE.
+- **In-processing** (fix learner): adversarial
+  debiasing, fairness-constrained optimization.
+- **Post-processing** (fix output): input, classifier,
+  output correction.
+
+### Reweighing
+**What:** sample weights by group and label. Privileged
+down, unprivileged up. **Features and labels unchanged.**
+**Lab result:** SPD -0.0000, DI 1.0000 on training data.
+
+### Disparate Impact Remover (DIR)
+**What:** edits **feature values** so they correlate less
+with the protected attribute. Labels unchanged.
+Needs BlackBoxAuditing.
+**Lab result:** best repair level 0.40, DI 0.8683.
+
+### Repair level
+**What:** how hard DIR edits features (0 = none,
+1 = full).
+
+### SMOTE
+**What:** synthetic samples for minority classes.
+
+### Adversarial debiasing
+**What:** a predictor learns the task while an adversary
+tries to guess the protected attribute from its output.
+
+### Fairness vs accuracy (3 trade-offs)
+Fairness vs accuracy, fairness vs utility, fairness
+across metrics (improving one can worsen another).
+**Lab:** Reweighing cut test accuracy ~1 point
+(0.8176 -> 0.8057) and lifted DI 0.8339 -> 0.9326.
+**No one-size-fits-all:** healthcare may favor fairness,
+fraud detection accuracy, yet fairness still counts.
 
 ---
 
