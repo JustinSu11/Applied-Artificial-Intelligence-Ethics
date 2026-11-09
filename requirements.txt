@@ -1,8 +1,7 @@
 aif360
-lightgbm
 matplotlib
 numpy
 pandas
 seaborn
-sklearn
+scikit-learn
 tqdm
