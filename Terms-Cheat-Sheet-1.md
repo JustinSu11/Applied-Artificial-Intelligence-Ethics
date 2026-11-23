@@ -1,0 +1,1101 @@
+# AI Ethics: Terms Cheat Sheet
+
+> Quick reference for review. Read the **Fast Recall**
+> first (30 sec), then jump to any term.
+> Each term: **What** (plain words), **Hook** (memory
+> trick), **Example**.
+
+**Status:** Week 1 -> 1.1, 1.2, 1.3a, 1.3b done.
+Week 2 -> 2.2 (parts 1 and 2) done, 2.1 pending.
+Week 3 -> 3.1 lecture + lab (concepts, tutorial) done.
+Week 4 -> 4.1a, 4.1b + lab done.
+Week 5 -> 5.1, 5.2 + SHAP lab done.
+Week 6 -> 6.1, 6.2, 6.3 done.
+Week 7 -> 7.1 done (course wrap-up).
+
+---
+
+## Fast Recall (30 seconds)
+
+**Floridi's 5 ethics risks** = **B**uffet, **P**aint,
+**L**awyer, **T**rash, **S**kip
+
+| Hook   | Term             | Tell-tale sign                   |
+|--------|------------------|----------------------------------|
+| Buffet | Ethics shopping  | Picks the rule that fits them    |
+| Paint  | Bluewashing      | Big claim, little action         |
+| Lawyer | Ethics lobbying  | "We self-regulate, no law needed"|
+| Trash  | Ethics dumping   | Banned here, tested over there   |
+| Skip   | Ethics shirking  | Skips ethics where payoff is low |
+
+**Predictive policing: 4 breaches** =
+Dirty data -> Loop -> Black box -> Gut bias
+
+**5 course principles** =
+Dignity & freedom - Justice & fairness -
+Privacy & safety - Explainability & transparency -
+Responsibility
+
+**Ethics vs Governance** =
+Ethics asks "What *should* AI do?"
+Governance asks "How do we *make sure* it does?"
+
+**3 levels of governance** = Society -> Institutions
+-> Individuals (laws -> audits -> codes & design)
+
+**Publication ladder** (soft -> hard):
+Value (compass) -> Principle (goal) ->
+Framework (blueprint) -> Guidance (how-to) ->
+Requirements (must-dos) -> Checklist (ALTAI)
+
+**Hard rules ladder:** Law (what) ->
+Regulation (how to carry it out) ->
+Technical standard (exact spec)
+
+**Actors vs Stakeholders** = actors *do* (build/run AI),
+stakeholders are *involved or affected*.
+Actors are a subset of stakeholders.
+
+**Fairness metrics (Week 3)** = how to read them:
+
+| Metric | Fair value | Bad sign |
+|--------|-----------|----------|
+| SPD (difference) | 0 | negative = unprivileged loses |
+| DI (ratio) | 1 | below 0.8 fails four-fifths rule |
+| EOD (TPR gap) | 0 | big gap in true positive rate |
+| SEDF (intersectional) | 0 | far from 0 |
+
+**Mitigation = Pre / In / Post** (Before, During, After
+training). Hook: *fix the data, fix the learner,
+fix the output.*
+
+**Bias sources (3)** = Data -> Truths -> Insights
+
+**Privacy triad (Week 4)** = **P**rivacy (who *sees* it),
+**S**afety (does it *behave*), **S**ecurity (who can
+*break in*).
+
+**Privacy tools (Week 4):**
+
+| Tool | Hides you by | Weak spot |
+|------|--------------|-----------|
+| K-anonymity | Crowd of k (group + blur) | Outside/linked data |
+| Differential privacy | Random noise (Laplace) | Costs accuracy |
+
+**Epsilon** = privacy budget. Hook: *small epsilon = small
+leak* (more noise, more privacy, less accuracy).
+Noise scale = sensitivity / epsilon.
+**Small groups pay most:** relative error is about
+noise / count.
+
+**Explain trio (Week 5)** = **Explain** (tools after),
+**Interpret** (clear by design), **Transparent** (open about
+purpose, data, mechanics). Hook: *recipe vs waiter vs open
+kitchen.* Transparency does NOT equal fairness.
+
+**SHAP 4 axioms** = **ESNA**: **E**fficiency (sums to
+prediction minus average), **S**ymmetry (equal work, equal
+value), **N**ull/dummy (no impact = 0), **A**dditivity
+(combined model = sum). Hook: *fair taxi bill.*
+
+**SHAP limits (4)** = Slow (2^n), Local-first, Correlated
+features, No bias fix.
+
+**Bias fixes after SHAP (5)** = Audit, Data, Post-process,
+Human, Constraints.
+
+**AI colonialism: 5 parallels** = Extraction, Economic
+exploitation, Cultural imperialism, Inequality, Dependency.
+
+**AI Bill of Rights (Oct 2022, NOT binding), 5 principles** =
+Safe & effective - Algorithmic discrimination - Data privacy -
+Notice & explanation - Human alternatives/fallback.
+Hook: *Some Dogs Prefer Naps Here.*
+
+**EU AI Act 4 tiers** = Unacceptable (banned: social scoring) >
+High (strict) > Limited (transparency notice: chatbot) >
+Minimal (spam filter, games).
+
+**3 practical ethics approaches (6.2)** = Principles-based
+(Montreal Declaration), Ethical by design (co-design, audits,
+human-in-the-loop), Ethical consciousness (culture).
+
+**Ethics by / in / for design (6.3)** = *by* = build ethical
+reasoning into AI, *in* = engineering techniques to evaluate,
+*for* = standards and certification.
+
+---
+
+## Index (A-Z)
+
+| Term                       | Lecture |
+|----------------------------|---------|
+| AI actors                  | 1.3a    |
+| AI ethics vs AI governance | 1.3a    |
+| Algorithmic audit          | 1.3a    |
+| Assessment List (ALTAI)    | 1.3b    |
+| Biased data                | 1.1     |
+| Bluewashing                | 1.2     |
+| CCPA                       | 1.2     |
+| Confirmation bias          | 1.1     |
+| Double standard            | 1.2     |
+| EU AI Act                  | 1.3b    |
+| Ethics by design           | 1.3a    |
+| Ethics dumping             | 1.2     |
+| Ethics lobbying            | 1.2     |
+| Ethics shirking            | 1.2     |
+| Ethics shopping            | 1.2     |
+| Ethics washing (umbrella)  | 1.2     |
+| Feedback loop              | 1.1     |
+| Five principles            | 1.1     |
+| Foresight & oversight      | 1.1     |
+| Framework                  | 1.3b    |
+| GDPR                       | 1.2     |
+| Garbage in, garbage out    | 1.1     |
+| Governance (3 levels)      | 1.3a    |
+| Greenwashing               | 1.2     |
+| Guidance (vs guidelines)   | 1.3b    |
+| Impact assessment          | 1.3a    |
+| Lack of transparency       | 1.1     |
+| Law                        | 1.3b    |
+| Not value neutral          | 1.3a    |
+| Partnership on AI (PAI)    | 1.3a    |
+| Personal values (compass)  | 1.2     |
+| Predictive policing        | 1.1     |
+| Principle                  | 1.3b    |
+| Proxy attribute            | 1.1     |
+| Regulation                 | 1.3b    |
+| Requirements               | 1.3b    |
+| Scientific veneer          | 1.1     |
+| Self-regulation            | 1.2     |
+| Stakeholders               | 1.3a    |
+| Technical standard         | 1.3b    |
+| Technical vs non-technical | 1.3a    |
+| Unconscious bias           | 1.1     |
+| Value                      | 1.3b    |
+| AI impact assessment (AI-IA) | 2.2 p1 |
+| Ethics impact assessment (EIA) | 2.2 p1 |
+| IEEE 7010                  | 2.2 p1  |
+| Intended user              | 2.2 p2  |
+| Taxonomy                   | 2.2 p1  |
+| Unintended user            | 2.2 p2  |
+| Well-being impact assessment (WIA) | 2.2 p2 |
+| Well-being indicators dashboard | 2.2 p2 |
+| Stakeholder (IEEE 7010)    | 2.2 p2  |
+| Stakeholder tiers          | 2.2 p2  |
+| 4 impact dimensions        | 2.2 p2  |
+| Adversarial debiasing      | 3.1     |
+| Algorithmic bias           | 3.1     |
+| Anchoring bias             | 3.1     |
+| Bias (ML)                  | 3.1     |
+| COMPAS                     | 3.1     |
+| Conservatism bias          | 3.1     |
+| Disparate impact (DI)      | 3.1     |
+| Disparate Impact Remover   | 3.1     |
+| Equal opportunity difference (EOD) | 3.1 |
+| Equalized odds             | 3.1     |
+| Ethical dilemma            | 3.1     |
+| Ethical transgression      | 3.1     |
+| Exclusion bias             | 3.1     |
+| Fairness                   | 3.1     |
+| Fairness vs accuracy       | 3.1     |
+| Four-fifths rule           | 3.1     |
+| Historical bias            | 3.1     |
+| In-processing              | 3.1     |
+| Measurement bias           | 3.1     |
+| Post-processing            | 3.1     |
+| Pre-processing             | 3.1     |
+| Prejudice bias             | 3.1     |
+| Privileged / unprivileged  | 3.1     |
+| Protected attribute        | 3.1     |
+| Repair level               | 3.1     |
+| Reweighing                 | 3.1     |
+| Salience bias              | 3.1     |
+| Sampling bias              | 3.1     |
+| SMOTE                      | 3.1     |
+| Simpson's paradox          | 3.1     |
+| SEDF                       | 3.1     |
+| Statistical parity difference (SPD) | 3.1 |
+| Structural bias            | 3.1     |
+| Systemic bias              | 3.1     |
+| Cumulative privacy budget  | 4.1b    |
+| Data is the new oil        | 4.1a    |
+| Differential privacy       | 4.1b    |
+| Direct identifier          | 4.1b    |
+| Epsilon (privacy budget)   | 4.1b    |
+| Generalization             | 4.1b    |
+| K-anonymization            | 4.1b    |
+| Laplace mechanism          | 4.1b    |
+| Linkage attack             | 4.1a    |
+| Netflix Prize              | 4.1a    |
+| Privacy                    | 4.1a    |
+| Quasi-identifier           | 4.1b    |
+| Relative error (small groups) | 4.1 lab |
+| Safety                     | 4.1a    |
+| Security                   | 4.1a    |
+| Sensitivity (DP)           | 4.1b    |
+| Suppression                | 4.1b    |
+| Sweeney experiment         | 4.1b    |
+| The Cost of Reading Privacy Policies | 4.1a |
+| Additivity (SHAP axiom)    | 5.2     |
+| AI Bill of Rights          | 6.1     |
+| AI colonialism             | 5.1     |
+| Amazon Echo case           | 6.1     |
+| Appen / Oskarina Fuentes   | 5.1     |
+| Base value (SHAP)          | 5.2 lab |
+| Beeswarm plot              | 5.2 lab |
+| Deepfake case (India)      | 6.2     |
+| Deontology (duty ethics)   | 6.2     |
+| Efficiency (SHAP axiom)    | 5.2     |
+| Ethical by design / consciousness / principles-based | 6.2 |
+| Ethics by / in / for design | 6.3    |
+| EU AI Act (4 tiers)        | 6.1     |
+| Executive order (2023)     | 6.1     |
+| Explainability             | 5.1     |
+| Force plot                 | 5.2 lab |
+| Governance (principle)     | 6.1     |
+| Indigenous ethics          | 6.2     |
+| Interpretability           | 5.1     |
+| Jewish ethics              | 6.2     |
+| Local vs global (SHAP)     | 5.2     |
+| Micro-work                 | 5.1     |
+| Model-agnostic             | 5.2     |
+| Null / dummy (SHAP axiom)  | 5.2     |
+| Responsibility (principle) | 6.1     |
+| SHAP / Shapley values      | 5.2     |
+| Stakeholder taxonomies     | 6.3     |
+| Sustainability (principle) | 6.1     |
+| Symmetry (SHAP axiom)      | 5.2     |
+| Technical standards (ethics) | 6.3   |
+| Transparency               | 5.1     |
+| Ubuntu                     | 6.2     |
+| Utilitarianism             | 6.2     |
+| Virtue ethics              | 6.2     |
+| Buddhist ethics            | 6.2     |
+
+---
+
+# Week 1
+
+## Lecture 1.1: The Power and Promise of AI
+
+**Big idea:** AI can do huge good, but the outcome
+depends on *how it's built* and *how it's used*.
+Good intentions are not enough.
+
+### Garbage In, Garbage Out (GIGO)
+**What:** Bad data in = bad results out. (George Fuechsel)
+**Hook:** A great chef can't fix rotten ingredients.
+**Example:** Model trained on biased police records
+gives biased predictions.
+
+### Foresight & oversight
+**What:** Think ahead about misuse, then keep watching
+after launch.
+**Hook:** What seems good today can be abused tomorrow.
+**Example:** A tool built to help police gets used to
+over-target neighborhoods.
+
+### Predictive policing
+**What:** Using data + predictive analytics to guess
+where crime may happen (or who may offend).
+**Hook:** Good intent, bad outcome.
+**Example:** PredPol (now Geolitica) used by about 1/3
+of US agencies by 2017.
+
+### Biased data  *(breach 1)*
+**What:** Past data reflects past human bias, and the
+model copies it.
+**Hook:** Dirty data in -> dirty decisions out.
+**Example:** Over-policed area = more recorded crime
+= model says "send more police," whatever the real
+crime rate.
+
+### Feedback loop (vicious)  *(core idea)*
+**What:** Model output changes the real world, which
+creates new data that feeds the model again.
+**Hook:** A snake eating its own tail.
+**Example:** Predict crime here -> patrol here ->
+arrests here -> data says "crime here."
+
+### Confirmation bias  *(breach 2)*
+**What:** Seeing only evidence that confirms what you
+already believe. Here, the system confirms itself.
+**Hook:** Lawyer, not judge.
+**Example:** More patrols find more minor offenses,
+which "prove" the zone is high crime.
+
+### Lack of transparency & accountability  *(breach 3)*
+**What:** You can't inspect or challenge the model,
+so nobody is answerable for bias.
+**Hook:** Black box = no blame.
+**Example:** Proprietary software, so outsiders can't
+audit the algorithm.
+
+### Unconscious bias  *(breach 4)*
+**What:** Hidden biases of builders and users shape
+design, rollout, and results.
+**Hook:** Bias you don't know you have.
+**Example:** Builders never asked how the data was
+collected or what era it came from.
+
+### Proxy attribute
+**What:** A harmless-looking feature that stands in
+for a protected trait.
+**Hook:** A mask for race.
+**Example:** Zip code or school attended, used by
+Chicago's model to label people "high risk."
+
+### Scientific veneer (for racism)
+**What:** Math/AI makes biased results look
+objective and neutral.
+**Hook:** Racism in a lab coat.
+**Example:** 1,400 mathematicians signed a 2020 letter
+refusing to work with police on this.
+
+### Five ethical principles (course roadmap)
+1. Dignity & freedom
+2. Justice & fairness
+3. Privacy & safety
+4. Explainability & transparency
+5. Responsibility
+
+**Hook:** every breach above maps to one of these.
+
+### Case timeline: predictive policing
+- **1930:** first uniform police report (Jim Crow era
+  data later feeds models)
+- **2008:** recession -> police budget cuts
+- **2009:** first predictive policing symposium;
+  LAPD gets $3M for trials
+- **2012:** PredPol created
+- **2017:** ~1/3 of agencies use predictive software
+- **2020:** Chicago scraps program (85% of top-risk
+  scores were African American men, many with no
+  record); LAPD ends it; Santa Cruz first US city
+  ban
+- **May 2023:** European Parliament votes to ban it
+  (still in use in the US)
+
+---
+
+## Lecture 1.2: Floridi, Ethics Washing
+
+**Big idea:** Stop only debating *what* the standards
+are. Start *doing* them. Floridi names 5 ways
+companies fake it.
+
+### Ethics washing (umbrella)
+**What:** Looking more ethical than you are. The
+5 risks below are its flavors.
+**Hook:** Costume, not conduct.
+
+### Ethics shopping  (Buffet)
+**What:** Picking or bending ethical guidelines to
+justify what you already do, instead of changing
+behavior.
+**Hook:** Ethics buffet: take only what you like.
+**Example:** After GDPR (2018), Facebook gave EU users
+strong privacy but moved ~1.5B non-EU users under
+looser US-style terms.
+**Result:** Inconsistent standards, weak accountability.
+
+### Bluewashing  (Paint)
+**What:** Misleading claims or shallow actions to look
+digitally ethical without real change.
+**Hook:** A fresh coat of paint over a cracked wall.
+**Example:** Facebook in Myanmar: impact assessment
+skipped the Rohingya communities, promises were
+reactive and aimed at public perception.
+**Tell:** Underfunded or powerless ethics councils.
+
+### Greenwashing  *(the cousin)*
+**What:** Same trick for the environment: seeming
+greener than you are. Bluewashing = digital version.
+
+### Ethics lobbying  (Lawyer)
+**What:** Using "ethics" arguments to delay, weaken,
+or avoid good laws.
+**Hook:** Hire a lawyer to dodge the rules.
+**Example:** Google and allies lobbied to soften the
+CCPA, saying voluntary privacy measures were enough.
+**Result:** Harmful practices stay unregulated longer.
+
+### Self-regulation
+**What:** "We police ourselves, no law needed."
+**Hook:** The favorite excuse in ethics lobbying.
+
+### Ethics dumping  (Trash)
+**What:** Exporting practices to places with weak laws
+that would be unacceptable at home (or importing the
+results).
+**Hook:** Taking your trash to someone else's yard.
+**Example:** Huawei/ZTE smart cities in Africa: facial
+recognition and surveillance with little oversight.
+**Tell:** *Double standard*: strict where regulated,
+loose where not. Locals become a **testing ground**.
+
+### Ethics shirking  (Skip)
+**What:** Doing less ethical work where the payoff
+looks low.
+**Hook:** Skipping the homework nobody grades.
+**Example:** PredPol knew data was biased and the
+feedback loop existed, but did little to fix it.
+**Result:** Inequality, hits vulnerable groups most.
+
+### Personal values (the compass)
+**What:** Rules and company policy aren't enough.
+Your own values guide you when no one is checking.
+**Hook:** Compass, not rulebook.
+
+### Supporting terms
+- **GDPR:** EU privacy law (2018), very strict.
+- **CCPA:** California law giving consumers control
+  over their data (know, opt out of sale).
+- **Double standard:** different ethics by region.
+- **Testing ground:** weak-law region used to refine
+  tech before bringing it to strict markets.
+
+---
+
+## Lecture 1.3a: Values & Intent of AI Ethics, Frameworks
+
+**Big idea:** Ethics says what AI *should* do.
+Governance makes it happen. And who writes the rules
+matters, because rules are not neutral.
+
+### AI ethics vs AI governance
+**What:** Ethics = "What should AI do?"
+Governance = "How do we ensure it does?" Policy-driven,
+ideally with enforcement.
+**Hook:** Ethics is the *goal*, governance is the *referee*.
+
+### Technical vs non-technical governance
+**What:** Two streams.
+- *Technical:* make the system itself accountable
+  (design justification, ethics by design, testing,
+  validation).
+- *Non-technical:* regulation, codes of conduct,
+  certification, education, stakeholder input.
+**Hook:** Fix the machine vs. fix the rules around it.
+
+### Governance: 3 levels
+1. **Society:** national/international law and human
+   rights (e.g., Universal Declaration of Human Rights).
+2. **Institutions:** guidance for orgs: risk management,
+   impact assessments, audits, due diligence, CSR.
+3. **Individuals:** ethics frameworks and professional
+   codes (ACM, BCS, ISO, IEEE) plus design methods.
+
+**Hook:** Big (laws) -> Medium (company process) ->
+Small (your own work).
+
+### Impact assessment
+**What:** Check a system's effects *before* deploying.
+Types: privacy, data protection, ethics, social,
+human rights.
+**Hook:** Look before you launch.
+
+### Algorithmic audit
+**What:** Independent check of an algorithm's behavior
+and bias. An institution-level tool.
+
+### Ethics by design (also: privacy by design)
+**What:** Build ethics into the design process from the
+start instead of bolting it on later.
+**Hook:** Seatbelts installed at the factory.
+
+### AI actors vs stakeholders (NIST)
+**What:** *Actors* play an active role in the AI
+lifecycle (build, deploy, operate). *Stakeholders* are
+everyone involved or affected, directly or indirectly.
+**Hook:** Actors act. Stakeholders are all who are
+touched. Actors <= stakeholders.
+**Actor types:** private sector, government,
+international orgs, multi-stakeholder orgs, civil
+society, natural persons.
+
+### Not value neutral
+**What:** Ethics and governance documents carry the
+interests of whoever wrote them. They may or may not
+serve the public good.
+**Hook:** Always ask "who wrote this, and what do
+they gain?"
+**Link:** this is where ethics washing (1.2) lives.
+
+### Partnership on AI (PAI)
+**What:** Multi-stakeholder group: Apple, Amazon,
+DeepMind, Google, Facebook, IBM, Microsoft. Also works
+on the AI Incident Database.
+
+### Actor roles (one-line summary)
+- Natural persons: use AI and are affected by it
+- Governments: rights, laws, regulations, standards
+- Nonprofits: improve society in varied ways
+- International orgs: help countries cooperate
+- Corporations: build and deploy AI for profit
+- Multi-stakeholders: alliances forming technical
+  agreements, often for industry advantage
+
+---
+
+## Lecture 1.3b: Publications & Communications of AI Ethics
+
+**Big idea:** AI governance runs on public documents
+meant to shape behavior. They form a progression, and
+each word means something different.
+(You probably won't read these as a dev. Know the map.)
+
+### The ladder (soft -> concrete)
+**Compass -> Goal -> Blueprint -> How-to -> Must-dos
+-> Checklist**
+= Value -> Principle -> Framework -> Guidance ->
+Requirements -> Assessment list
+
+### Value
+**What:** A conception of the desirable that steers
+choices. The moral compass.
+
+### Principle
+**What:** High-level desirable goal for ethical conduct.
+Context-free on purpose.
+**Example:** EU Ethics Guidelines for Trustworthy AI:
+respect for human dignity, freedom, democracy, justice
+and rule of law, equality and non-discrimination,
+citizen rights.
+
+### Framework
+**What:** Structured model outlining core values,
+principles, and how they relate. The roadmap that
+guides decisions.
+**Hook:** The blueprint, not the building.
+**Note:** Used in practice when laws/standards are
+missing.
+
+### Guidance (not the same as guidelines)
+**What:** Practical recommendations for *how to apply*
+a framework's principles. Companion to a framework.
+**Hook:** The how-to manual.
+
+### Requirements
+**What:** Concrete, measurable criteria derived from
+principles: what an AI system must do or avoid.
+Written for designers, developers, deployers.
+**Hook:** Sub-bullets under a principle you can
+actually test.
+
+### Assessment List (ALTAI)
+**What:** EU Assessment List for Trustworthy AI. Turns
+the requirements into a checklist for developers,
+operators, deployers.
+**Hook:** The to-do list at the end of the ladder.
+
+### EU AI Act
+**What:** Binding law that grew out of the EU's
+human-rights-based framework. Includes risk
+assessments and requirements.
+**Hook:** Soft rules that hardened into law.
+
+### Law / Regulation / Technical standard
+- **Law:** rule made by government to order society.
+- **Regulation:** official rule with detailed
+  instructions on *how to carry out* laws.
+- **Technical standard:** accepted protocol or spec
+  (like a unit of measure) for an industry.
+**Hook:** Law = what. Regulation = how.
+Standard = exact spec.
+
+### Who values what (compare lists)
+- **Governments:** protect human rights, democracy.
+- **Companies:** profit, innovation, efficiency.
+- **EU principles:** human autonomy, prevention of
+  harm, fairness.
+- **OECD / GPAI:** inclusive growth, sustainable
+  development, well-being come first.
+
+**Questions to ask (from the lecture):**
+- Is well-being the same as human rights?
+- Is sustainable development the same as caring for
+  the environment?
+- "Inclusive growth": who is included?
+
+---
+
+# Week 2
+
+## Lecture 2.1: (waiting for the correct transcript)
+
+## Lecture 2.2: Helsinki AV Scenario and IEEE 7010
+
+**Big idea:** impact assessments and standards are not
+neutral. IEEE 7010 gives a process to assess a system's
+effect on human well-being.
+
+### Taxonomy
+**What:** a **closed list of acceptable terms arranged
+hierarchically** to describe and classify content.
+Glossaries and definitions also classify.
+**Warning:** taxonomies operationalize certain values,
+can prioritize some stakeholders, and **miss true harms.**
+
+### AI impact assessment (AI-IA)
+**What:** identify **positive and negative impacts
+early** to safeguard benefits and avoid downsides.
+Can be self-assessments used for audits and legal or
+standards requirements.
+**Covers:** human rights, ethics, data protection,
+privacy, security, safety, environment.
+**Fits in:** organizational processes and the wider
+governance system. **Not neutral.**
+
+### Ethics impact assessment (EIA)
+**What:** impact assessment focused on ethics. Like
+AI-IAs and standards, **not neutral.**
+
+### IEEE 7010
+**What:** *Recommended Practice for Assessing the Impact
+of Autonomous and Intelligent Systems on Human
+Well-Being.* Produces a well-being indicators dashboard.
+
+### Well-being impact assessment (WIA)
+**What:** the IEEE 7010 process. **Iterative**, done at
+**every phase** (concept, design, development,
+ongoing monitoring). **5 activities:** internal
+analysis, user/stakeholder engagement, indicators
+dashboard, data collection process and collection, data
+analysis and iteration.
+**WIA activity one:** internal user and stakeholder
+impact assessment (guidance pp. 21-22, Annex E).
+
+### Well-being indicators dashboard
+**What:** the output of the WIA, used to design, deploy,
+monitor, and improve the system. At least **one
+indicator per domain**, aligned with established datasets
+(e.g., the World Happiness Report).
+
+### Intended / unintended user / stakeholder
+- **Intended user:** person the creator intends to use
+  the system.
+- **Unintended user:** not intended, but interacts with
+  it anyway (children, tourists, suspended-license
+  drivers).
+- **Stakeholder:** anyone meaningfully (or potentially)
+  **impacted by** the system **or impacting it** (police,
+  insurers, data labelers, pedestrians).
+
+### Stakeholder tiers (Helsinki pilot)
+1. Directly impacted
+2. Elderly and vulnerable populations
+3. Indirect and future users and stakeholders
+
+### 4 dimensions of an impact assessment
+**Stakeholders, harms, risk, values.**
+
+### Case: Helsinki AV pilot
+Goal: end personal car ownership by 2040. Pilot on an
+island, ~5,000 people, one month. Providers: INVIDA
+(AI), Cargle (cars), SimTech (infrastructure). Uses
+**"satisfaction with life"** as an indicator.
+
+---
+
+# Week 3
+
+## Lecture 3.1: Bias and Fairness (COMPAS) + Lab
+
+**Big idea:** Bias gets into models from data, society,
+and how we read results. Fairness metrics measure it,
+mitigation reduces it, and fairness always trades off
+against accuracy.
+
+### Bias (in ML)
+**What:** systematic error that favors or harms groups.
+**Hook:** A scale that always reads heavy for one group.
+
+### Fairness
+**What:** a model treats groups (by protected attribute)
+equitably. Which definition fits is a **value choice.**
+
+### COMPAS
+**What:** Northpointe's risk score for reoffending, used
+in US courts. ProPublica (2016) found unequal errors by
+race: Black non-reoffenders flagged high risk ~45% vs
+~24% for white. Race was not an input (proxies).
+**Hook:** Race wasn't asked, but it still leaked in.
+
+### Ethical transgression vs dilemma
+- **Transgression:** crossing a moral boundary (legal or
+  not).
+- **Dilemma:** every option leads to a transgression.
+**Hook:** Transgression = crossing the line. Dilemma =
+every road crosses it.
+
+### Bias types: 3 buckets
+**Data:** *sampling* (unrepresentative), *measurement*
+(faulty capture), *exclusion* (groups left out).
+**Truths in data:** *systemic*, *structural* (wage gaps),
+*prejudice* (stereotypes), *historical*.
+**Insights:** *conservatism* (ignore new evidence),
+*salience* (loudest feature), *anchoring* (first number),
+*confirmation*, *algorithmic* (design choices).
+**Hook:** Data -> Truths -> Insights.
+
+### Protected attribute / privileged vs unprivileged
+**What:** traits like race, gender, age, religion.
+Privileged group gets the advantage; unprivileged is hurt
+most.
+**Lab:** age, privileged = 26-47, unprivileged = 21-25
+and 48+.
+
+### Statistical parity difference (SPD)
+**What:** P(favorable | unprivileged) minus
+P(favorable | privileged).
+**Read:** 0 = fair, negative = unprivileged loses.
+**Lab:** -0.1202 on training data.
+
+### Disparate impact (DI)
+**What:** the *ratio* of those two probabilities.
+**Read:** 1 = fair, below 1 = unprivileged loses, above 1
+= unprivileged favored. Legal staple.
+**Lab:** 0.8480 on training data.
+
+### Four-fifths rule
+**What:** DI below **0.8** is evidence of adverse impact.
+From US hiring practice under **Title VII, Civil Rights
+Act of 1964.**
+
+### Equal opportunity difference (EOD)
+**What:** gap in **true positive rate** between groups.
+
+### Equalized odds
+**What:** TPR **and** the negative-class error rate match
+across groups. Stricter than EOD.
+
+### SEDF (smoothed empirical differential fairness)
+**What:** **intersectional** fairness over all groups of
+the protected attributes, not just privileged vs not.
+Handles **Simpson's paradox.**
+**Read:** **0 = fair**, farther from 0 = less fair.
+(The lab narrator says "closer to 1"; the numbers back 0.)
+
+### Simpson's paradox
+**What:** a trend in the whole data reverses or vanishes
+when you split into subgroups.
+
+### Mitigation: Pre / In / Post
+- **Pre-processing** (fix data): reweighing, DIR, SMOTE.
+- **In-processing** (fix learner): adversarial
+  debiasing, fairness-constrained optimization.
+- **Post-processing** (fix output): input, classifier,
+  output correction.
+
+### Reweighing
+**What:** sample weights by group and label. Privileged
+down, unprivileged up. **Features and labels unchanged.**
+**Lab result:** SPD -0.0000, DI 1.0000 on training data.
+
+### Disparate Impact Remover (DIR)
+**What:** edits **feature values** so they correlate less
+with the protected attribute. Labels unchanged.
+Needs BlackBoxAuditing.
+**Lab result:** best repair level 0.40, DI 0.8683.
+
+### Repair level
+**What:** how hard DIR edits features (0 = none,
+1 = full).
+
+### SMOTE
+**What:** synthetic samples for minority classes.
+
+### Adversarial debiasing
+**What:** a predictor learns the task while an adversary
+tries to guess the protected attribute from its output.
+
+### Fairness vs accuracy (3 trade-offs)
+Fairness vs accuracy, fairness vs utility, fairness
+across metrics (improving one can worsen another).
+**Lab:** Reweighing cut test accuracy ~1 point
+(0.8176 -> 0.8057) and lifted DI 0.8339 -> 0.9326.
+**No one-size-fits-all:** healthcare may favor fairness,
+fraud detection accuracy, yet fairness still counts.
+
+---
+
+# Week 4
+
+## Lecture 4.1a: Privacy, Safety, Security (Netflix)
+
+**Big idea:** AI runs on personal data. Removing names does
+not make data anonymous, and reading privacy policies is
+not real consent.
+
+### Privacy / Safety / Security
+**What:** Privacy = data collected, stored, used in ways
+that respect individual rights. Safety = AI works reliably,
+no unintended harm. Security = AI protected from hacking or
+manipulation.
+**Hook:** who *sees* it, does it *behave*, who can *break in*.
+
+### Data is the new oil
+**What:** data powers AI like oil powered industry, but
+unlike oil it has a **personal dimension** (habits,
+identity).
+
+### The Cost of Reading Privacy Policies
+**What:** McDonald and Cranor (Carnegie Mellon): reading
+every policy = about **244 hours/year** (about 40 min/day),
+about **$781 billion/year** in the US.
+**Hook:** if fine print is a second job, it isn't consent.
+
+### Netflix Prize and linkage attack
+**What:** 2006 contest, 100M+ ratings, 480,000 users,
+17,000+ movies, goal 10% better. "Anonymized" but kept
+user IDs, titles, ratings, timestamps. Matched with IMDb
+(a **linkage attack**) -> re-identified users -> lawsuit
+-> pressure behind **GDPR and CCPA.**
+**Hook:** your pattern is your fingerprint.
+
+---
+
+## Lecture 4.1b: K-Anonymization and Differential Privacy
+
+**Big idea:** quasi-identifiers can re-identify people.
+Hide them in groups (k-anonymity) or blur results with noise
+(differential privacy). Both cost accuracy.
+
+### Direct identifier vs quasi-identifier
+**What:** direct = points to one person alone (name, SSN,
+license, passport, email). Quasi = only identifying in
+combination (birthdate, zip, occupation, marital status,
+gender, ethnicity).
+**Hook:** name tag vs clues.
+
+### Sweeney experiment
+**What:** 1990s, Massachusetts "de-identified" medical
+records linked to voter records via zip, birthdate, gender.
+Identified Governor **William Weld.** Lecture: **80%** of
+the US identifiable by those 3.
+
+### K-anonymization
+**What:** each person indistinguishable from at least
+**k-1** others on the quasi-identifiers. Steps: find
+quasi-identifiers -> group and count (each combo at least k
+times) -> generalize or suppress.
+**Hook:** hide in a crowd of k.
+**Weak spot:** background / auxiliary knowledge attacks;
+less useful data.
+
+### Suppression vs generalization
+- **Suppression:** remove or mask values or records.
+- **Generalization:** broaden values (zip 1234*, age
+  30-39, diagnosis -> chronic / respiratory).
+
+### Differential privacy
+**What:** add random noise to query results so one person
+being in or out is not detectable.
+**Hook:** a fuzzy scale that wobbles more than your weight.
+
+### Laplace mechanism
+**What:** the common DP method; adds noise from a Laplace
+distribution. Scale = **sensitivity / epsilon.**
+
+### Epsilon (privacy budget)
+**What:** controls privacy vs accuracy. **Small epsilon =
+more noise = stronger privacy, lower accuracy.** Large =
+the reverse.
+**Hook:** small epsilon, small leak.
+**Use:** healthcare -> smaller; consumer analytics -> larger.
+
+### Sensitivity (DP)
+**What:** how much one person can change a query result
+(1 for a count).
+
+### Cumulative privacy budget
+**What:** every query on the same data spends budget; total
+privacy loss adds up. Track cumulative epsilon.
+
+---
+
+## Lab 4.1: Differential Privacy on Mock Census Data
+
+### Relative error (small groups)
+**What:** (noisy - original) / original x 100. Noise size is
+the same for every group, so relative error is about
+**b / count** (b = 1/epsilon for counts). Small groups get
+hit hardest.
+**Lab:** seed 531, 10,000 people. At e = 0.1, Native American
+(111) -8.62%, Other (307) +10.43%, White (5,991) +0.08%.
+**Hook:** same noise, smaller denominator.
+
+---
+
+# Week 5
+
+## Lecture 5.1: Explainability, Interpretability, Transparency, AI Colonialism
+
+**Big idea:** Three ways to make AI understandable, then who is
+hidden behind AI (data and labeling workers).
+
+### Explainability
+**What:** processes and methods so humans can comprehend and
+trust ML outputs; usually **post-hoc** tools.
+**Hook:** the waiter explaining the dish.
+
+### Interpretability
+**What:** how far a system's internals and decisions can be
+understood in human terms; **inherent clarity** in the design.
+**Hook:** a recipe simple enough to read.
+
+### Transparency
+**What:** openness about purpose, data sources, operational
+mechanics. Undermined by proprietary systems, IP, trade secrets.
+**Hook:** open kitchen window.
+
+### AI colonialism
+**What:** data collection and AI deployment that exploit or
+marginalize communities; power consolidates in a few hands.
+**5 parallels:** resource extraction, economic exploitation,
+cultural imperialism, inequality/marginalization, dependency.
+**Hook:** old colonies shipped cotton; AI colonies ship data
+and labeling hours.
+
+### Micro-work (hidden labor)
+**What:** humans label data (face parts, traffic) behind
+"autonomous" AI. Source: Jones, *Work Without the Worker*.
+**Case:** Oskarina Fuentes Anaya / Appen (Venezuela): 18+ hour
+days, $7-$8 slow weeks vs $10 withdrawal minimum, rejected
+tasks unpaid, no mental health support. Venezuela = "perfect
+storm"; model spread to Kenya, North Africa, parts of Asia.
+
+---
+
+## Lecture 5.2: SHAP (Model-Agnostic Explainability)
+
+**Big idea:** Split a prediction into per-feature credit using
+Shapley values (game theory). Works on any model.
+
+### SHAP
+**What:** Python library; feature = player, prediction = payout;
+checks all feature combinations. **Local** (one prediction) and
+**global** (aggregate).
+**Hook:** the group dinner bill.
+
+### Four axioms (ESNA)
+**Efficiency** (sums to prediction minus average), **Symmetry**
+(equal contributions, equal value), **Null/dummy** (no impact =
+0), **Additivity** (combined model = sum).
+**Taxi:** $30 ride; 10+12+8 = 30; A and B $15 each; C $0.
+
+### Limitations
+Computational cost, weaker global view, feature independence
+assumption, **does not fix bias** (transparency != fairness).
+
+### Bias mitigation (5)
+Audits + fairness metrics (demographic parity, equal
+opportunity, disparate impact ratio), ethical data collection,
+post-processing, human oversight, fairness constraints in
+training.
+
+---
+
+## Lab 5.2: SHAP on the Adult (Census Income) Dataset
+
+### Setup
+1994 US Census, predict income >$50K. 80/20 split; one-hot
+(cats) + StandardScaler (nums) + LogisticRegression pipeline.
+100-row background sample; explain first 100 test rows.
+`class_index` 1 = >$50K.
+
+### Plots
+**Bar** (one person, length = size, blue down, red up),
+**force** (starts at base ~0.22, `shap.initjs()`),
+**beeswarm** (global; red = high feature value, blue = low).
+**Instance 0:** Education -0.09, Sex -0.04, Hours +0.04.
+**Slip:** lecture says final prediction 0.0121; notebook output
+is 0.0067.
+**Bug:** `OneHotEncoder()` needs `handle_unknown='ignore'` to
+score the full test set (Country 15 appears only in test).
+
+---
+
+# Week 6
+
+## Lecture 6.1: Responsibility, Governance, Sustainability
+
+**Big idea:** Responsibility = foundation, governance = the
+enforcer, sustainability = long-term vision.
+
+### AI Bill of Rights (US)
+**What:** Oct 2022, White House; **5 principles**; **not
+legally binding.** Safe and effective systems; algorithmic
+discrimination protections; data privacy; notice and
+explanation; human alternatives, consideration, fallback.
+
+### US landscape
+2023 executive order. **No comprehensive federal AI law**;
+guidelines, EOs, sector rules, NIST AI RMF.
+
+### EU AI Act
+World's first comprehensive AI law. **4 tiers:** unacceptable
+(banned, social scoring), high (strict), limited (transparency
+notice), minimal (spam filter, games). Inspires Canada (AIDA)
+and UK.
+
+### Amazon Echo case (Crawford and Joler)
+Lithium (Salar, Bolivia, 50-70% of reserves, "gray gold"; Tesla
+about 138 lb, phone about 8 g), repair voids warranty, phone
+lifespan 4.7 yrs; cobalt miners about $1/day, children as young
+as 7; Bezos $275M/day; e-waste in India, Ghana, China; data
+centers' electricity and water; Amazon's opaque carbon
+footprint.
+
+---
+
+## Lecture 6.2: Ethical Frameworks + Deepfake Case
+
+### Frameworks
+| Lens | One line |
+|---|---|
+| Utilitarianism | results; pain/pleasure; objection: can justify immoral acts |
+| Deontology | duty, rights, never a mere means; objection: rigid |
+| Virtue ethics | character (Aristotle); objection: unclear, cultural |
+| Ubuntu (African) | "I am because we are"; communal wellbeing |
+| Buddhist | end suffering; long-term relational ramifications |
+| Jewish | Torah; human life paramount |
+| Indigenous | interconnectedness; harmony, reciprocity, gratitude, humility |
+
+### Deepfake case
+Rana Ayyub (India), April 2018 report, deepfake porn, later a
+spoof "auction" site targeting Muslim women; Delhi police
+charged two people. All lenses condemn it, for different reasons.
+
+### Three practical approaches
+Principles-based (Montreal Declaration), ethical by design,
+ethical consciousness.
+
+---
+
+## Lecture 6.3: Governance Tools, Technical Standards, Taxonomies
+
+### Key ideas
+Developers fill the gap where laws are thin: checklists,
+metrics, libraries, data sets, standards. Technical standards
+= interoperability and efficiency, but **not neutral** and
+**least likely** to include human rights. Taxonomies used in
+incident reporting, risk assessment, mitigation. ISO is
+translating risk-management standards to AI.
+
+---
+
+# Week 7
+
+## Lecture 7.1: From Principles to Practices
+
+Ethics is **everyone's responsibility**, not just specialists.
+Small consistent actions build a culture of ethical AI. Speak
+up on data misuse, discriminatory models, harmful applications;
+be a role model: ethics and innovation go together.
+
+---
+
+## Course status: Weeks 1-7 done. 2.1 still pending.

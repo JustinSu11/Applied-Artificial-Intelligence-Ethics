@@ -8,6 +8,10 @@
 **Status:** Week 1 -> 1.1, 1.2, 1.3a, 1.3b done.
 Week 2 -> 2.2 (parts 1 and 2) done, 2.1 pending.
 Week 3 -> 3.1 lecture + lab (concepts, tutorial) done.
+Week 4 -> 4.1a, 4.1b + lab done.
+Week 5 -> 5.1, 5.2 + SHAP lab done.
+Week 6 -> 6.1, 6.2, 6.3 done.
+Week 7 -> 7.1 done (course wrap-up).
 
 ---
 
@@ -66,6 +70,59 @@ training). Hook: *fix the data, fix the learner,
 fix the output.*
 
 **Bias sources (3)** = Data -> Truths -> Insights
+
+**Privacy triad (Week 4)** = **P**rivacy (who *sees* it),
+**S**afety (does it *behave*), **S**ecurity (who can
+*break in*).
+
+**Privacy tools (Week 4):**
+
+| Tool | Hides you by | Weak spot |
+|------|--------------|-----------|
+| K-anonymity | Crowd of k (group + blur) | Outside/linked data |
+| Differential privacy | Random noise (Laplace) | Costs accuracy |
+
+**Epsilon** = privacy budget. Hook: *small epsilon = small
+leak* (more noise, more privacy, less accuracy).
+Noise scale = sensitivity / epsilon.
+**Small groups pay most:** relative error is about
+noise / count.
+
+**Explain trio (Week 5)** = **Explain** (tools after),
+**Interpret** (clear by design), **Transparent** (open about
+purpose, data, mechanics). Hook: *recipe vs waiter vs open
+kitchen.* Transparency does NOT equal fairness.
+
+**SHAP 4 axioms** = **ESNA**: **E**fficiency (sums to
+prediction minus average), **S**ymmetry (equal work, equal
+value), **N**ull/dummy (no impact = 0), **A**dditivity
+(combined model = sum). Hook: *fair taxi bill.*
+
+**SHAP limits (4)** = Slow (2^n), Local-first, Correlated
+features, No bias fix.
+
+**Bias fixes after SHAP (5)** = Audit, Data, Post-process,
+Human, Constraints.
+
+**AI colonialism: 5 parallels** = Extraction, Economic
+exploitation, Cultural imperialism, Inequality, Dependency.
+
+**AI Bill of Rights (Oct 2022, NOT binding), 5 principles** =
+Safe & effective - Algorithmic discrimination - Data privacy -
+Notice & explanation - Human alternatives/fallback.
+Hook: *Some Dogs Prefer Naps Here.*
+
+**EU AI Act 4 tiers** = Unacceptable (banned: social scoring) >
+High (strict) > Limited (transparency notice: chatbot) >
+Minimal (spam filter, games).
+
+**3 practical ethics approaches (6.2)** = Principles-based
+(Montreal Declaration), Ethical by design (co-design, audits,
+human-in-the-loop), Ethical consciousness (culture).
+
+**Ethics by / in / for design (6.3)** = *by* = build ethical
+reasoning into AI, *in* = engineering techniques to evaluate,
+*for* = standards and certification.
 
 ---
 
@@ -161,6 +218,60 @@ fix the output.*
 | Statistical parity difference (SPD) | 3.1 |
 | Structural bias            | 3.1     |
 | Systemic bias              | 3.1     |
+| Cumulative privacy budget  | 4.1b    |
+| Data is the new oil        | 4.1a    |
+| Differential privacy       | 4.1b    |
+| Direct identifier          | 4.1b    |
+| Epsilon (privacy budget)   | 4.1b    |
+| Generalization             | 4.1b    |
+| K-anonymization            | 4.1b    |
+| Laplace mechanism          | 4.1b    |
+| Linkage attack             | 4.1a    |
+| Netflix Prize              | 4.1a    |
+| Privacy                    | 4.1a    |
+| Quasi-identifier           | 4.1b    |
+| Relative error (small groups) | 4.1 lab |
+| Safety                     | 4.1a    |
+| Security                   | 4.1a    |
+| Sensitivity (DP)           | 4.1b    |
+| Suppression                | 4.1b    |
+| Sweeney experiment         | 4.1b    |
+| The Cost of Reading Privacy Policies | 4.1a |
+| Additivity (SHAP axiom)    | 5.2     |
+| AI Bill of Rights          | 6.1     |
+| AI colonialism             | 5.1     |
+| Amazon Echo case           | 6.1     |
+| Appen / Oskarina Fuentes   | 5.1     |
+| Base value (SHAP)          | 5.2 lab |
+| Beeswarm plot              | 5.2 lab |
+| Deepfake case (India)      | 6.2     |
+| Deontology (duty ethics)   | 6.2     |
+| Efficiency (SHAP axiom)    | 5.2     |
+| Ethical by design / consciousness / principles-based | 6.2 |
+| Ethics by / in / for design | 6.3    |
+| EU AI Act (4 tiers)        | 6.1     |
+| Executive order (2023)     | 6.1     |
+| Explainability             | 5.1     |
+| Force plot                 | 5.2 lab |
+| Governance (principle)     | 6.1     |
+| Indigenous ethics          | 6.2     |
+| Interpretability           | 5.1     |
+| Jewish ethics              | 6.2     |
+| Local vs global (SHAP)     | 5.2     |
+| Micro-work                 | 5.1     |
+| Model-agnostic             | 5.2     |
+| Null / dummy (SHAP axiom)  | 5.2     |
+| Responsibility (principle) | 6.1     |
+| SHAP / Shapley values      | 5.2     |
+| Stakeholder taxonomies     | 6.3     |
+| Sustainability (principle) | 6.1     |
+| Symmetry (SHAP axiom)      | 5.2     |
+| Technical standards (ethics) | 6.3   |
+| Transparency               | 5.1     |
+| Ubuntu                     | 6.2     |
+| Utilitarianism             | 6.2     |
+| Virtue ethics              | 6.2     |
+| Buddhist ethics            | 6.2     |
 
 ---
 
@@ -710,4 +821,281 @@ fraud detection accuracy, yet fairness still counts.
 
 ---
 
-## Next lecture: (waiting for transcript)
+# Week 4
+
+## Lecture 4.1a: Privacy, Safety, Security (Netflix)
+
+**Big idea:** AI runs on personal data. Removing names does
+not make data anonymous, and reading privacy policies is
+not real consent.
+
+### Privacy / Safety / Security
+**What:** Privacy = data collected, stored, used in ways
+that respect individual rights. Safety = AI works reliably,
+no unintended harm. Security = AI protected from hacking or
+manipulation.
+**Hook:** who *sees* it, does it *behave*, who can *break in*.
+
+### Data is the new oil
+**What:** data powers AI like oil powered industry, but
+unlike oil it has a **personal dimension** (habits,
+identity).
+
+### The Cost of Reading Privacy Policies
+**What:** McDonald and Cranor (Carnegie Mellon): reading
+every policy = about **244 hours/year** (about 40 min/day),
+about **$781 billion/year** in the US.
+**Hook:** if fine print is a second job, it isn't consent.
+
+### Netflix Prize and linkage attack
+**What:** 2006 contest, 100M+ ratings, 480,000 users,
+17,000+ movies, goal 10% better. "Anonymized" but kept
+user IDs, titles, ratings, timestamps. Matched with IMDb
+(a **linkage attack**) -> re-identified users -> lawsuit
+-> pressure behind **GDPR and CCPA.**
+**Hook:** your pattern is your fingerprint.
+
+---
+
+## Lecture 4.1b: K-Anonymization and Differential Privacy
+
+**Big idea:** quasi-identifiers can re-identify people.
+Hide them in groups (k-anonymity) or blur results with noise
+(differential privacy). Both cost accuracy.
+
+### Direct identifier vs quasi-identifier
+**What:** direct = points to one person alone (name, SSN,
+license, passport, email). Quasi = only identifying in
+combination (birthdate, zip, occupation, marital status,
+gender, ethnicity).
+**Hook:** name tag vs clues.
+
+### Sweeney experiment
+**What:** 1990s, Massachusetts "de-identified" medical
+records linked to voter records via zip, birthdate, gender.
+Identified Governor **William Weld.** Lecture: **80%** of
+the US identifiable by those 3.
+
+### K-anonymization
+**What:** each person indistinguishable from at least
+**k-1** others on the quasi-identifiers. Steps: find
+quasi-identifiers -> group and count (each combo at least k
+times) -> generalize or suppress.
+**Hook:** hide in a crowd of k.
+**Weak spot:** background / auxiliary knowledge attacks;
+less useful data.
+
+### Suppression vs generalization
+- **Suppression:** remove or mask values or records.
+- **Generalization:** broaden values (zip 1234*, age
+  30-39, diagnosis -> chronic / respiratory).
+
+### Differential privacy
+**What:** add random noise to query results so one person
+being in or out is not detectable.
+**Hook:** a fuzzy scale that wobbles more than your weight.
+
+### Laplace mechanism
+**What:** the common DP method; adds noise from a Laplace
+distribution. Scale = **sensitivity / epsilon.**
+
+### Epsilon (privacy budget)
+**What:** controls privacy vs accuracy. **Small epsilon =
+more noise = stronger privacy, lower accuracy.** Large =
+the reverse.
+**Hook:** small epsilon, small leak.
+**Use:** healthcare -> smaller; consumer analytics -> larger.
+
+### Sensitivity (DP)
+**What:** how much one person can change a query result
+(1 for a count).
+
+### Cumulative privacy budget
+**What:** every query on the same data spends budget; total
+privacy loss adds up. Track cumulative epsilon.
+
+---
+
+## Lab 4.1: Differential Privacy on Mock Census Data
+
+### Relative error (small groups)
+**What:** (noisy - original) / original x 100. Noise size is
+the same for every group, so relative error is about
+**b / count** (b = 1/epsilon for counts). Small groups get
+hit hardest.
+**Lab:** seed 531, 10,000 people. At e = 0.1, Native American
+(111) -8.62%, Other (307) +10.43%, White (5,991) +0.08%.
+**Hook:** same noise, smaller denominator.
+
+---
+
+# Week 5
+
+## Lecture 5.1: Explainability, Interpretability, Transparency, AI Colonialism
+
+**Big idea:** Three ways to make AI understandable, then who is
+hidden behind AI (data and labeling workers).
+
+### Explainability
+**What:** processes and methods so humans can comprehend and
+trust ML outputs; usually **post-hoc** tools.
+**Hook:** the waiter explaining the dish.
+
+### Interpretability
+**What:** how far a system's internals and decisions can be
+understood in human terms; **inherent clarity** in the design.
+**Hook:** a recipe simple enough to read.
+
+### Transparency
+**What:** openness about purpose, data sources, operational
+mechanics. Undermined by proprietary systems, IP, trade secrets.
+**Hook:** open kitchen window.
+
+### AI colonialism
+**What:** data collection and AI deployment that exploit or
+marginalize communities; power consolidates in a few hands.
+**5 parallels:** resource extraction, economic exploitation,
+cultural imperialism, inequality/marginalization, dependency.
+**Hook:** old colonies shipped cotton; AI colonies ship data
+and labeling hours.
+
+### Micro-work (hidden labor)
+**What:** humans label data (face parts, traffic) behind
+"autonomous" AI. Source: Jones, *Work Without the Worker*.
+**Case:** Oskarina Fuentes Anaya / Appen (Venezuela): 18+ hour
+days, $7-$8 slow weeks vs $10 withdrawal minimum, rejected
+tasks unpaid, no mental health support. Venezuela = "perfect
+storm"; model spread to Kenya, North Africa, parts of Asia.
+
+---
+
+## Lecture 5.2: SHAP (Model-Agnostic Explainability)
+
+**Big idea:** Split a prediction into per-feature credit using
+Shapley values (game theory). Works on any model.
+
+### SHAP
+**What:** Python library; feature = player, prediction = payout;
+checks all feature combinations. **Local** (one prediction) and
+**global** (aggregate).
+**Hook:** the group dinner bill.
+
+### Four axioms (ESNA)
+**Efficiency** (sums to prediction minus average), **Symmetry**
+(equal contributions, equal value), **Null/dummy** (no impact =
+0), **Additivity** (combined model = sum).
+**Taxi:** $30 ride; 10+12+8 = 30; A and B $15 each; C $0.
+
+### Limitations
+Computational cost, weaker global view, feature independence
+assumption, **does not fix bias** (transparency != fairness).
+
+### Bias mitigation (5)
+Audits + fairness metrics (demographic parity, equal
+opportunity, disparate impact ratio), ethical data collection,
+post-processing, human oversight, fairness constraints in
+training.
+
+---
+
+## Lab 5.2: SHAP on the Adult (Census Income) Dataset
+
+### Setup
+1994 US Census, predict income >$50K. 80/20 split; one-hot
+(cats) + StandardScaler (nums) + LogisticRegression pipeline.
+100-row background sample; explain first 100 test rows.
+`class_index` 1 = >$50K.
+
+### Plots
+**Bar** (one person, length = size, blue down, red up),
+**force** (starts at base ~0.22, `shap.initjs()`),
+**beeswarm** (global; red = high feature value, blue = low).
+**Instance 0:** Education -0.09, Sex -0.04, Hours +0.04.
+**Slip:** lecture says final prediction 0.0121; notebook output
+is 0.0067.
+**Bug:** `OneHotEncoder()` needs `handle_unknown='ignore'` to
+score the full test set (Country 15 appears only in test).
+
+---
+
+# Week 6
+
+## Lecture 6.1: Responsibility, Governance, Sustainability
+
+**Big idea:** Responsibility = foundation, governance = the
+enforcer, sustainability = long-term vision.
+
+### AI Bill of Rights (US)
+**What:** Oct 2022, White House; **5 principles**; **not
+legally binding.** Safe and effective systems; algorithmic
+discrimination protections; data privacy; notice and
+explanation; human alternatives, consideration, fallback.
+
+### US landscape
+2023 executive order. **No comprehensive federal AI law**;
+guidelines, EOs, sector rules, NIST AI RMF.
+
+### EU AI Act
+World's first comprehensive AI law. **4 tiers:** unacceptable
+(banned, social scoring), high (strict), limited (transparency
+notice), minimal (spam filter, games). Inspires Canada (AIDA)
+and UK.
+
+### Amazon Echo case (Crawford and Joler)
+Lithium (Salar, Bolivia, 50-70% of reserves, "gray gold"; Tesla
+about 138 lb, phone about 8 g), repair voids warranty, phone
+lifespan 4.7 yrs; cobalt miners about $1/day, children as young
+as 7; Bezos $275M/day; e-waste in India, Ghana, China; data
+centers' electricity and water; Amazon's opaque carbon
+footprint.
+
+---
+
+## Lecture 6.2: Ethical Frameworks + Deepfake Case
+
+### Frameworks
+| Lens | One line |
+|---|---|
+| Utilitarianism | results; pain/pleasure; objection: can justify immoral acts |
+| Deontology | duty, rights, never a mere means; objection: rigid |
+| Virtue ethics | character (Aristotle); objection: unclear, cultural |
+| Ubuntu (African) | "I am because we are"; communal wellbeing |
+| Buddhist | end suffering; long-term relational ramifications |
+| Jewish | Torah; human life paramount |
+| Indigenous | interconnectedness; harmony, reciprocity, gratitude, humility |
+
+### Deepfake case
+Rana Ayyub (India), April 2018 report, deepfake porn, later a
+spoof "auction" site targeting Muslim women; Delhi police
+charged two people. All lenses condemn it, for different reasons.
+
+### Three practical approaches
+Principles-based (Montreal Declaration), ethical by design,
+ethical consciousness.
+
+---
+
+## Lecture 6.3: Governance Tools, Technical Standards, Taxonomies
+
+### Key ideas
+Developers fill the gap where laws are thin: checklists,
+metrics, libraries, data sets, standards. Technical standards
+= interoperability and efficiency, but **not neutral** and
+**least likely** to include human rights. Taxonomies used in
+incident reporting, risk assessment, mitigation. ISO is
+translating risk-management standards to AI.
+
+---
+
+# Week 7
+
+## Lecture 7.1: From Principles to Practices
+
+Ethics is **everyone's responsibility**, not just specialists.
+Small consistent actions build a culture of ethical AI. Speak
+up on data misuse, discriminatory models, harmful applications;
+be a role model: ethics and innovation go together.
+
+---
+
+## Course status: Weeks 1-7 done. 2.1 still pending.
